@@ -11,6 +11,9 @@ export async function getJobs(
         params.append("limit", String(filters.limit));
     }
 
+    if (filters.q) {
+        params.append("q", filters.q);
+    }
     if (filters.employment_type) {
         params.append("employment_type", filters.employment_type);
     }
