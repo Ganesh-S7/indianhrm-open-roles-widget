@@ -2,6 +2,11 @@ import { useCallback, useEffect, useState } from "react";
 import { getJobs } from "../api/job";
 import type { Job, JobFilters } from "../types/job";
 
+/**
+ * Fetches jobs based on the provided filters and exposes
+ * loading, error, and retry states for the UI.
+ */
+
 export function useJobs(filters: JobFilters = {}) {
     const [jobs, setJobs] = useState<Job[]>([]);
     const [loading, setLoading] = useState(true);

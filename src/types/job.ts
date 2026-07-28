@@ -16,7 +16,7 @@ export interface JobsResponse {
     total: number;
 }
 
-export type EmployementTypes = "full_time" | "part_time" | "contract" | "internship"
+export type EmployementTypes = "full_time" | "part_time" | "contract" | "intern"
 
 export interface JobFilters {
     limit?: number;

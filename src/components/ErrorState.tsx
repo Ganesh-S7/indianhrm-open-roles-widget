@@ -1,28 +1,36 @@
 interface ErrorStateProps {
-  message: string;
-  onRetry: () => void;
+    message: string;
+    onRetry: () => void;
 }
 
 export function ErrorState({
-  message,
-  onRetry,
+    message,
+    onRetry,
 }: ErrorStateProps) {
-  return (
-    <div className="rounded-xl border border-red-200 bg-red-50 p-8 text-center">
-      <h2 className="text-lg font-semibold text-red-700">
-        Something went wrong
-      </h2>
+    return (
+        <div
+            role="alert"
+            className="rounded-2xl border border-line bg-paper-raised px-10 py-16 text-center"
+        >
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-brick">
+                Something went wrong
+            </p>
 
-      <p className="mt-2 text-sm text-red-600">
-        {message}
-      </p>
+            <h2 className="mt-3 font-display text-2xl font-medium text-ink">
+                We couldn't load open roles
+            </h2>
 
-      <button
-        onClick={onRetry}
-        className="mt-6 rounded-lg bg-red-600 px-5 py-2 text-white transition hover:bg-red-700"
-      >
-        Retry
-      </button>
-    </div>
-  );
+            <p className="mx-auto mt-2 max-w-sm text-sm text-ink-muted">
+                {message}
+            </p>
+
+            <button
+                type="button"
+                onClick={onRetry}
+                className="mt-8 rounded-lg bg-ink px-6 py-2.5 text-sm font-medium text-paper transition hover:bg-emerald"
+            >
+                Try again
+            </button>
+        </div>
+    );
 }
