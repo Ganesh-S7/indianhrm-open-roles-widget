@@ -1,32 +1,27 @@
-# React + TypeScript + Vite
+# IndianHRM Careers Widget
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A responsive careers page built with React, TypeScript, Vite, and Tailwind CSS that displays live job openings from the IndianHRM Careers API. The application supports debounced job title search, employment type filtering, loading/error/empty states, and an accessible job details modal.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+To create a production build:
+
+```bash
+npm run build
+```
+
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+
+## What I'd Do With Another Hour
+
+Given another hour, I would add unit tests for the custom hooks and key UI components using React Testing Library and Vitest. I'd also implement URL-based search and filter persistence so users can share filtered views and retain state after refreshing the page. Finally, I'd add subtle animations for the job details modal and improve focus management to further enhance the overall user experience and accessibility.
